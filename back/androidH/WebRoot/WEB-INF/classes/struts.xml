@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="10701096" />
+	<package name="androidtest" namespace="/"
+		extends="struts-default,json-default">
+
+
+
+		<action name="fileUpload" class="com.usr.Action.UploadAction"
+			method="execute">
+			<result name="Success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="fileDownload" class="com.usr.Action.DownloadAction"
+			method="execute">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename="通讯录2012年9月4日.txt"</param>
+				<param name="inputName">downloadFile</param>
+			</result>
+		</action>
+
+
+
+	</package>
+</struts>    

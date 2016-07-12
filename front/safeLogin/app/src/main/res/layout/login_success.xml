@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/success"
+        android:layout_weight="0.13" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:text="登录成功，欢迎您"
+        android:textColor="#8405a1"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="55dp"
+        android:layout_gravity="center_vertical"
+        android:editable="false"/>
+
+    <Button
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/yes"
+        style="@style/btn_style"
+        android:text="是我本人登录的"
+        android:background="@drawable/login_button"/>
+
+    <Button
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/no"
+        style="@style/btn_style"
+        android:text="不是我本人登录的"
+        android:background="@drawable/fail"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test1"
+        android:text="test"/>
+</LinearLayout>
